@@ -1,0 +1,27 @@
+{
+  "databaseUrl": {
+    "env": "DATABASE_URL"
+  },
+  "host": {
+    "env": "DB_HOST"
+  },
+  "port": {
+    "env": "DB_PORT"
+  },
+  "database": {
+    "env": "DB_NAME"
+  },
+  "user": {
+    "env": "DB_USER"
+  },
+  "password": {
+    "env": "DB_PASSWORD"
+  },
+  "dir": "src/database/migrations",
+  "direction": "up",
+  "table": "pgmigrations",
+  "schema": "public",
+  "checkOrder": true,
+  "verbose": true,
+  "migrationPattern": ".*\\.ts"
+}
