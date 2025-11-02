@@ -54,3 +54,54 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ============================================
+# ADICIONADO PARA O SISTEMA DE MATRÍCULAS
+# ============================================
+
+# node-pg-migrate - dados temporários
+...data
+**/...data/**
+*.pg
+
+# Backups do package.json
+package.json.backup
+package-lock.json.backup
+
+# Arquivos de banco de dados locais
+*.db
+*.sqlite
+*.sqlite3
+
+# Dumps de banco
+*.sql.backup
+*.dump
+*.dmp
+
+# Configuração local do node-pg-migrate (se houver)
+.migrationrc.local.json
+
+# Cache do TypeScript
+*.tsbuildinfo
+
+# Logs específicos da aplicação
+/logs/**
+app.log
+error.log
+combined.log
+
+# Uploads (se implementar upload de arquivos)
+/uploads/**
+/public/uploads/**
+
+# Arquivos de configuração local
+.env.*.local
+config.local.json
+
+# Documentação gerada
+/docs/api/**
+/docs/coverage/**
+
+# Scripts de testes locais
+test-local.sh
+*.test.local.ts

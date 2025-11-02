@@ -96,3 +96,41 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Database migrations & seeds (TypeORM)
+
+This project includes a minimal TypeORM setup example under `src/database`:
+
+- `src/database/data-source.ts` — DataSource configuration (defaults to SQLite if `DATABASE_URL` is not set; set `DB_TYPE=postgres` + `DATABASE_URL` to use Postgres).
+- `src/database/data-source.ts` — DataSource configuration (configured for Postgres; also supports `DATABASE_URL`).
+- `src/database/migrations/` — example migration file.
+- `src/database/seeds/` — seed runner and an initial seed.
+
+Recommended npm scripts (added to `package.json`):
+
+- `npm run migration:run` — run migrations (uses TypeORM CLI with `-d src/database/data-source.ts`).
+- `npm run seed:run` — run seeds (runs `src/database/seeds/run-seeds.ts` via `ts-node`).
+
+Note: you need to install dependencies after editing `package.json`:
+
+```powershell
+# install dependencies
+npm install
+
+# run migrations (dev)
+npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/database/data-source.ts
+
+# run seeds
+npx ts-node -r tsconfig-paths/register src/database/seeds/run-seeds.ts
+```
+
+Environment
+-----------
+
+Copy the example env file and update with your Postgres credentials:
+
+```powershell
+copy .env.example .env
+``` 
+
+The data-source is already configured to use Postgres by default. If you prefer to use a single connection string, set `DATABASE_URL` instead of individual DB_* vars.
