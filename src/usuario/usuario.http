@@ -1,0 +1,32 @@
+### list usuario
+
+GET http://localhost:3000/usuario
+
+### Get usuario
+
+GET http://localhost:3000/usuario/3
+
+### Create usuario
+
+POST  http://localhost:3000/usuario
+
+##Exemplo
+
+Content-Type: application/json
+
+{
+    
+    "nome": "Luiz Eduardo",
+    "email": "luiz.eduardo@exemplo.com",
+    "senha": "minhasenhaforte",
+    "ativo": true
+}
+
+### update usuario
+
+PATCH  http://localhost:3000/usuario/3
+
+
+###delete usuario
+
+DELETE http://localhost:3000/usuario/3

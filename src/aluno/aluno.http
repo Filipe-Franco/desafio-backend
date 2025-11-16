@@ -1,0 +1,19 @@
+### list alunos
+
+GET http://localhost:3000/aluno
+
+### Get alunos
+
+GET http://localhost:3000/aluno/3
+
+### Create alunos
+
+POST  http://localhost:3000/aluno
+
+### update alunos
+
+PATCH  http://localhost:3000/aluno/3
+
+### delete aluno
+
+DELETE  http://localhost:3000/aluno/3
